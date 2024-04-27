@@ -47,6 +47,10 @@ export default function App() {
         }}
       >
         <h1 className="text-2xl text-center">Calculadora</h1>
+        <p className="text-center">
+          Ésta calculadora está diseñada para resolver la siguiente ecuación
+        </p>
+        <img src="/image.png" alt="Una ecuación" className="w-[25rem]" />
         <NumberInput value={value} onChange={setValue} hasError={!!err} />
         {resultado !== null && <Result result={resultado} />}
         {!!err && <p className="text-red-500">{err}</p>}
