@@ -43,3 +43,7 @@ npm test
 - Para componente no-visual donde se calcule el término n de la serie, revisar [Calculate.ts](src/classes/Calculate.ts)
 
 - Para componente visual que muestra el resultado del cálculo, revisar [result.tsx](src/components/result.tsx)
+
+## Deployment
+
+[SeriesApp](https://series-iota.vercel.app/)
