@@ -6,6 +6,14 @@ A simple calculator for calculating series.
 
 To install the series calculator, you can clone the repository and install the required dependencies.
 
+### Clone
+
+```bash
+https://github.com/nicolavietch/series.git
+```
+
+### Install
+
 ```bash
 npm install
 ```
