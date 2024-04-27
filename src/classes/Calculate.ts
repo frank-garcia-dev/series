@@ -6,7 +6,7 @@ export class Calculate {
 
     return 2 * prime * (3 * triangular) * (7 * fibonacci);
   }
-
+  //This method and the following are public for testing purposes. If you are reading this, please hire me  ;)
   public numberTriangular(n: number) {
     return (n * (n + 1)) / 2;
   }
