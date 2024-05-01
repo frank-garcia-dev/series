@@ -17,33 +17,36 @@ export default function App() {
         className="grid gap-2"
         onSubmit={(e) => {
           e.preventDefault();
+
           if (value === "") {
             setErr("El valor es requerido.");
             setResultado(null);
             return;
           }
+
           const numberValue = Number(value);
-          if (isNaN(numberValue)) {
-            setErr("El valor de n no es un número.");
-            setResultado(null);
-            return;
-          }
-          if (numberValue <= 0) {
-            setErr("El valor de n debe ser un número positivo.");
-            setResultado(null);
-            return;
-          }
 
-          if (numberValue % 1 !== 0) {
-            setErr("El valor de n debe ser un número entero.");
-            setResultado(null);
-            return;
+          let res = null;
+
+          switch (true) {
+            case isNaN(numberValue):
+              setErr("El valor de n no es un número.");
+              setResultado(null);
+              break;
+            case numberValue <= 0:
+              setErr("El valor de n debe ser un número positivo.");
+              setResultado(null);
+              break;
+            case numberValue % 1 !== 0:
+              setErr("El valor de n debe ser un número entero.");
+              setResultado(null);
+              break;
+            default:
+              res = Calc.calculate(numberValue);
+              setErr(null);
+              setResultado(res);
+              break;
           }
-
-          const res = Calc.calculate(numberValue);
-
-          setErr(null);
-          setResultado(res);
         }}
       >
         <h1 className="text-2xl text-center">Calculadora</h1>
